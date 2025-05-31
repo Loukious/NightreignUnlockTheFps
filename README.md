@@ -11,7 +11,7 @@ This is a fork of [UnlockTheFps](https://github.com/techiew/EldenRingMods/blob/m
 - EAC (Easy Anti-Cheat) must be disabled.
 
 ## Installation
-1. Download the latest release of this mod from the [releases page](./releases/latest)
+1. Download the latest release of this mod from the [Nexus Mods](https://www.nexusmods.com/eldenringnightreign/mods/25)
 2. Extract the contents of the downloaded zip file into your `mods` folder, which is located in the same directory as your `nightreign.exe`.
 3. Launch the game as normal.
 
