@@ -32,10 +32,10 @@ DWORD WINAPI MainThread(LPVOID lpParam)
 	{
 		ReadConfig();
 
-		const std::string PATTERN_UNLOCK_FPS = "c7 ? ? ? 88 88 3c eb";
+		const std::string PATTERN_UNLOCK_FPS = "c7 43 ? ? 88 88 3c";
 		const int PATTERN_UNLOCK_FPS_OFFSET = 3;
 
-		const std::string EXPECTED_UNLOCK_FPS_BYTES = "89 88 88 3c";
+		const std::string EXPECTED_UNLOCK_FPS_BYTES = "? 88 88 3c";
 		std::string patchedUnlockFpsBytes = "90 90 90 90";
 
 		float frametime = (1000.0f / fpsLimit) / 1000.0f;
