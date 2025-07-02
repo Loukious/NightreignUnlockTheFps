@@ -63,8 +63,7 @@ DWORD WINAPI MainThread(LPVOID lpParam)
 
 	Log("Removing 60 FPS fullscreen limit...");
 	{
-		const std::string PATTERN_HERTZLOCK = "eb ? c7 ? ? 3c 00 00 00 c7 ? ? 01 00 00 00";
-		const int PATTERN_HERTZLOCK_OFFSET = 2;
+		const std::string PATTERN_HERTZLOCK = "c7 45 ? 3c 00 00 00 c7 45 ? 01 00 00 00";
 		const int PATTERN_HERTZLOCK_OFFSET_INTEGER1 = 3;
 		const int PATTERN_HERTZLOCK_OFFSET_INTEGER2 = 10;
 
@@ -80,7 +79,6 @@ DWORD WINAPI MainThread(LPVOID lpParam)
 			Log("Pattern not found!");
 			return 1;
 		}
-		patchAddress += PATTERN_HERTZLOCK_OFFSET;
 
 		uintptr_t fpsValueAddr = patchAddress + PATTERN_HERTZLOCK_OFFSET_INTEGER1;
 		uintptr_t flagAddr = patchAddress + PATTERN_HERTZLOCK_OFFSET_INTEGER2;
